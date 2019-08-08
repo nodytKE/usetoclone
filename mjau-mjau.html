@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_1330269_81c4u0q2h0b.css" />
+		<link rel="stylesheet" href="http://cdn.repository.webfont.com/webfonts/nomal/132190/45817/5d44d917f629d8011cf20a8a.css" />
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+				/* font-family:myfont; */
+			}ul{
+				list-style: none;
+			}
+			
+			/* @font-face {
+			  font-family: myfont;  
+			  src: url('myfont.ttf');   
+			} */
+			@keyframes moveimg{
+				0%{
+					background-image: url(img/1.cat_people.jpg);
+				}
+				20%{
+					background-image: url(img/1.cat_people.jpg);
+				}
+				20.5%{
+					background-image: url(img/2.etc.jpg);
+				}
+				40%{
+					background-image: url(img/2.etc.jpg);
+				}
+				40.5%{
+					background-image: url(img/3.evening.jpg);
+				}
+				60%{
+					background-image: url(img/3.evening.jpg);
+				}
+				60.5%{
+					background-image: url(img/4.spacelings.jpg);
+				}
+				80%{
+					background-image: url(img/4.spacelings.jpg);
+				}
+				80.5%{
+					background-image: url(img/5.the_love.jpg);
+				}
+				100%{
+					background-image: url(img/5.the_love.jpg);
+				}
+			}
+			@keyframes moveline{
+				0%{
+					transform: scaleX(0);
+				}
+				20%{
+					transform: scaleX(1);
+				}
+				20.5%{
+					transform: scaleX(0);
+				}
+				40%{
+					transform: scaleX(1);
+				}
+				40.5%{
+					transform: scaleX(0);
+				}
+				60%{
+					transform: scaleX(1);
+				}
+				60.5%{
+					transform: scaleX(0);
+				}
+				80{
+					transform: scaleX(1);
+				}
+				80.5%{
+					transform: scaleX(0);
+				}
+				100%{
+					transform: scaleX(1);
+				}
+			}
+			.module{
+				width: 100%;
+				height: 1013px;
+				background: rgb(243, 244, 245);
+			}
+			
+			.module .img{
+				width: 100%;
+				height: 800px;
+				background-image:url(img/3.evening.jpg) ;
+				background-repeat:no-repeat ;
+				background-size:100% 800px;
+				animation:moveimg 20s linear  infinite;
+				position: relative;
+				margin-bottom: 30px;
+				transition: 0.5s;
+			}
+			.module .img:hover .button-left,.module .img:hover .button-right{
+				display: block;
+			}
+			.module .img::after{
+				content: '';
+				height: 3px;
+				width: 100%;
+				position: absolute;
+				background: deeppink;
+				left: 0;
+				bottom: 0;
+				animation:moveline 20s linear  infinite ;
+				/* transform: scaleX(0); */
+				transform-origin: left;
+			}
+			.module .img .nav-wrapper{
+				height: 120px;
+				width: 100%;
+				
+			}
+			.module .img .nav-wrapper .logo-wrapper{
+				height: 120px;
+				width: 1140px;
+				margin-left:auto ;
+				margin-right: auto;
+			/* 	border: 1px solid red; */
+			}
+			.module .img .nav-wrapper .logo-wrapper .logo-left{
+				height: 120px;
+				width: 240px;
+				float: left;
+				/* border: 1px solid greenyellow; */
+				
+				line-height: 120px;
+			}
+			.module .img .nav-wrapper .logo-wrapper .logo-left span{
+				font-size: 27px;
+				font-weight: 600;
+				transition: 1s;
+				display: inline-block;
+				cursor: pointer;
+				font-family:'ChannelSlanted2';
+			}
+			.module .img .nav-wrapper .logo-wrapper .logo-left span:first-of-type{
+				color: rgb(255, 20, 147);
+			}
+			.module .img .nav-wrapper .logo-wrapper .logo-left span:last-of-type{
+				color: rgb(176, 183, 190);
+			}
+			.module .img .nav-wrapper .logo-wrapper .logo-left i{
+				font-weight: 600;
+				transition: 1s;
+				color: rgb(255, 20, 147);
+			}
+			.module .img .nav-wrapper .logo-wrapper .logo-left:hover i{
+				display: none;
+			}
+			.module .img .nav-wrapper .logo-wrapper .logo-left:hover span:first-of-type{
+				transform: rotateY(360deg);
+				color: rgb(99, 109, 118);
+			}
+			.module .img .nav-wrapper .logo-wrapper .logo-left:hover span:last-of-type{
+				transform: rotateY(-360deg);
+				color: rgb(255, 20, 147);
+			}
+			.module .img .nav-wrapper .logo-wrapper ul{
+				height: 120px;
+				width: 420px;
+				float: right;
+				margin-right: 0;
+			/* 	border: 1px solid blueviolet; */
+				color: #fff;
+			}
+			.module .img .nav-wrapper .logo-wrapper ul li{
+				height: 50px;
+				
+				margin-top: 35px;
+				
+				/* background: rgb(217, 220, 223); */
+				
+				float: left;
+				cursor: pointer;
+				border-radius: 5px;
+				box-sizing: border-box;
+			}
+			.module .img .nav-wrapper .logo-wrapper ul li:last-of-type{
+				margin-right: 0;
+			}
+			.module .img .nav-wrapper .logo-wrapper ul li a{
+				padding: 20px;
+				line-height: 50px;
+				font-size: 12.8px;
+			}
+			.module .img .nav-wrapper .logo-wrapper ul li a i{
+				font-size: 10px;
+				font-weight: 600;
+			}
+			.module .img .detail{
+				height: 400px;
+				position: absolute;
+				top: 81px;
+				left: 0px;
+				width: 100%;
+				display: none;
+				background: rgb(217, 220, 223);
+				/* border: 1px solid red; */
+			}
+			.detail ul{
+				height:400px;
+				width: 840px;
+				position: absolute;
+				
+				border: 1px solid red;
+			}
+			.detail ul li{
+				height: 400px;
+				width: 250px;
+				border: 1px solid blue;
+			}
+			.detail ul:hover{
+				background: gray;
+			}
+			.module .img .nav-wrapper .logo-wrapper ul li:hover{
+				background: rgb(217, 220, 223);
+				color: rgb(81, 94, 101);
+			}
+			.module .img .nav-wrapper .logo-wrapper ul li:hover .detail{
+				display: block;
+			}
+			.words{
+				height: 213px;
+				width: 100%;
+			}
+			.words .content{
+				height: 150px;
+				width: 730px;
+				text-align: center;
+				margin-left:auto ;
+				margin-right: auto;
+				margin-top: 50px;
+				border-bottom:  1px solid rgb(216, 220, 223);
+			}
+			.words .content b{
+				font-size: 30px;
+				font-family:'ChannelSlanted2';
+				
+			}
+			.words .content i{
+				color: rgb(255, 79, 174);
+				font-weight: 600;
+			}
+			.words .content p{
+				color: #5b6971;
+				font-size: 19.2px;
+				
+			}
+			.row{
+				width: 100%;
+				overflow: hidden;
+				background: rgb(243, 244, 245);
+				height: 550px;
+				box-shadow:0 1px  lightgray ;
+				margin-bottom: 260px;
+			}
+			.row .row-content{
+				width: 1140px;
+				margin-top: 40px;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 0 15px 0;
+				
+			}
+			.row .row-content ul{
+				width: 1140px;
+				overflow: hidden;
+			}
+			.row .row-content li{
+				height: 360px;
+				width: 350px;
+				margin-right: 45px;
+				float: left;
+				text-align: center;
+				cursor: pointer;
+				position: relative;
+			}
+			.row .row-content li:last-of-type{
+				margin-right: 0;
+			}
+			.row .row-content li h2{
+				font-size:18px;
+				color: #48545a;
+				margin-bottom:7px ;
+				transition: 0.5s;
+				font-family:'ChannelSlanted2';
+			}
+			.row .row-content li h6{
+				font-size: 16px;
+				margin: 2px 0 5px;
+				color: deeppink;
+			}
+			.row .row-content li i{
+				font-size: 14px;
+				font-weight:600;
+			}
+			.row .row-content li img{
+				height: 181px;
+				width: 350px;
+				border: 6px solid #fff;
+				box-sizing: border-box;
+				box-shadow: 1px 1px 5px lightgray;
+			}
+			.row .row-content li p{
+				font-size: 14.4px;
+				color: #48545A;
+				margin: 16px 0 20px;
+			}
+			.row .row-content li:hover h2{
+				color: deeppink;
+			}
+			.row .row-content li .round{
+				height: 30px;
+				width: 30px;
+				background: deeppink;
+				position: absolute;
+				left: 155px;
+				top: 140px;
+				text-align: center;
+				line-height: 30px;
+				border-radius: 25px;
+				transition: 0.5s;
+				opacity: 0;
+			}
+			.row .row-content li .round i{
+				font-size: 15px;
+				color: #fff;
+			}
+			.row .row-content li:hover .round{
+				opacity: 1;
+				transform:rotate(-180deg) scale(1.8) ;
+			}
+			
+			
+			.module .img .button-left,.module .img .button-right{
+				height: 60px;
+				width: 40px;
+				background: rgba(0,0,0,0.2);
+				text-align: center;
+				line-height: 60px;
+				border-radius: 5px;
+				cursor: pointer;
+				display: none;
+			}
+			.module .img .button-left{
+				position: absolute;
+				top: calc(50% - 30px);
+				
+				
+			}
+			.module .img .button-right{
+				position: absolute;
+				right: 0;
+				top: calc(50% - 30px);
+				
+			}
+			.module .img .button-left i,.module .img .button-right i{
+				font-size: 15px;
+				font-weight: 600;
+				color: #FFFFFF;
+			}
+			.module .img .button-left:hover,.module .img .button-right:hover{
+				background: deeppink;
+			}
+			.module .fix-left{
+				width: 30px;
+				height: 40px;
+				/* border: 1px solid red; */
+				position: fixed;
+				overflow: hidden;
+				transition: 0.5s;
+				cursor: pointer;
+			}
+			.module .fix-left:hover{
+				width: 200px;
+				height: 200px;
+			}
+			.module .fix-left .share{
+				height: 40px;
+				/* width: 100px; */
+				width: 30px;
+				background: deeppink;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+				text-align: center;
+				line-height: 40px;
+				color: #FFFFFF;
+				
+				/* position:absolute;
+				z-index: 999; */
+			}
+			.module .fix-left .share span,.module .fix-left .facebook span,.module .fix-left .tweet span,.module .fix-left .google span,.module .fix-left .pin span{
+				visibility: hidden;
+				font-size: 0;
+				
+			}
+			.module .fix-left .share:hover{
+					width: 100px;
+			}
+			.module .fix-left .share:hover span{
+					font-size: 14px;
+					visibility: visible;
+					line-height: 40px;
+			}
+			.module .fix-left .facebook{
+				height: 40px;
+				/* width: 200px; */
+				width: 30px;
+				background: rgb(66, 85, 122);
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+				text-align: center;
+				line-height: 40px;
+				color: #FFFFFF;
+				/* position: absolute; */
+				
+				
+			}
+			.module .fix-left .facebook:hover{
+					width: 200px;
+			}
+			.module .fix-left .facebook:hover span{
+					font-size: 12px;
+					visibility: visible;
+			}
+			.module .fix-left .tweet{
+				height:40px ;
+				/* width: 120px; */
+				width: 30px;
+				background: rgb(85, 172, 238);
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+				text-align: center;
+				line-height: 40px;
+				color: #FFFFFF;
+				/* position: absolute; */
+			}
+			.module .fix-left .tweet:hover{
+					width: 120px;
+			}
+			.module .fix-left .tweet:hover span{
+					font-size: 12px;
+					visibility: visible;
+			}
+			.module .fix-left .google{
+				height: 40px;
+				/* width: 200px; */
+				width: 30px;
+				background: rgb(221, 75, 57);
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+				text-align: center;
+				line-height: 40px;
+				color: #FFFFFF;
+			/* 	position: absolute; */
+			}
+			.module .fix-left .google:hover{
+					width: 200px;
+			}
+			.module .fix-left .google:hover span{
+					font-size: 12px;
+					visibility: visible;
+			}
+			.module .fix-left .pin{
+				height: 40px;
+			
+				width: 30px;
+				background: rgb(204, 33, 39);
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+				text-align: center;
+				line-height: 40px;
+				color: #FFFFFF;
+				/* position: absolute; */
+			}
+			.module .fix-left .pin:hover{
+					width: 100px;
+			}
+			.module .fix-left .pin:hover span{
+					font-size: 13px;
+					visibility: visible;
+					line-height: 40pxs;
+			}
+			.module .fix-left .facebook i,.module .fix-left .tweet i,.module .fix-left .google i,.module .fix-left .pin i{
+				font-size: 20px;
+				display: inline-block;
+			}
+			.module .fix-left .share:hover i,.module .fix-left .facebook:hover i,.module .fix-left .tweet:hover i,.module .fix-left .google:hover i,.module .fix-left .pin:hover i{
+				color: rgb(127, 10, 73);
+			}
+			.module .fix-right{
+				width: 130px;
+				height: 125px;
+				position:absolute ;
+				top: 600px;
+				right: 20px;
+				position: fixed;
+				cursor: pointer;
+			}
+			.module .fix-right div{
+				width: 50px;
+				height: 40px;
+				border-radius: 5px;
+				margin-bottom: 2.5px;
+				margin-left: 100px;
+				background: deeppink;
+				float: right;
+				transition: 0.25s;
+				line-height: 40px;
+				
+			}
+			.module .fix-right div i{
+				float: right;
+				margin-right: 15px;
+				color: rgb(178, 13, 102);
+				transition: 0.5s;
+			}
+			.module .fix-right div:hover{
+				width: 120px;
+			}
+			
+			.module .fix-right div:nth-of-type(1) span{
+				opacity: 0;
+				position: absolute;
+				top: 0px;
+				left: 0 px;
+				color: #fff;
+				transition: 0.5s;
+				
+			}
+			.module .fix-right div:nth-of-type(2) span{
+				opacity: 0;
+				position: absolute;
+				top: 42.5px;
+				left: 0 px;
+				color: #fff;
+				transition: 0.5s;
+			}
+			.module .fix-right div:nth-of-type(3) span{
+				opacity: 0;
+				position: absolute;
+				top: 85px;
+				left:0 px;
+				color: #fff;
+				transition: 0.5s;
+			}
+			.module .fix-right div:last-of-type{
+				margin-bottom: 0;	
+			}
+			.module .fix-right div:hover span{
+				opacity: 1;
+				
+			}
+			
+			.module .fix-right div:hover i{
+				font-size: 22px;
+				color: #fff;
+			}
+			
+			
+			.fina{
+				height: 260px;
+				width: 100%;
+				background: rgb(230, 232, 234);
+				bottom: 0;
+				z-index: -1;
+				position: fixed;
+				
+			}
+			.fina .fina-content{
+				height: 100%;
+				width: 1140px;
+				margin: 0 auto;
+			
+				overflow: hidden;
+				position: relative;
+			}
+			.fina .fina-content .top{
+				height: 60px;
+				width: 60px;
+				background: rgb(216, 220, 223);
+				border-radius: 40px;
+				text-align: center;
+				line-height: 80px;
+				position: absolute;
+				left: 540px;
+				top:-30px;
+				transition: 0.5s;
+				cursor: pointer;
+			}
+			.fina .fina-content .top:hover{
+				background: deeppink;
+			}
+			.fina .fina-content .top i{
+				font-size: 22px;
+				font-weight: 600;
+				transition: 0.5s;
+			}
+			.fina .fina-content .top:hover i{
+				color: #fff;
+			}
+			.fina .fina-content ul{
+				width: 620px;
+				height: 120px;
+				
+				margin-top: 80px;
+				margin-left: auto;
+				margin-right: auto;
+				
+			}
+			.fina .fina-content ul li{
+				width: 60px;
+				height: 60px;
+				background:rgb(216, 220, 223) ;
+				border-radius: 40px;
+				text-align: center;
+				line-height: 60px;
+				float: left;
+				margin-right: 20px;
+				margin-top: 20px;
+				transition: 0.5s;
+				cursor: pointer;
+			}.fina .fina-content ul li i{
+				transition:0.5s ;
+			}
+			.fina .fina-content ul li:hover{
+				transform: scale(1.2,1.2);
+				
+			}
+			.fina .fina-content ul li:hover i{
+				color: #fff;
+			}
+			.fina .fina-content ul li:nth-of-type(1):hover{
+				background: rgb(69, 97, 157);
+			}
+			.fina .fina-content ul li:nth-of-type(2):hover{
+				background: rgb(222, 81, 64);
+			}
+			.fina .fina-content ul li:nth-of-type(3):hover{
+				background: rgb(10, 128, 185);
+			}
+			.fina .fina-content ul li:nth-of-type(4):hover{
+				background: rgb(91, 175, 238);
+			}
+			.fina .fina-content ul li:nth-of-type(5):hover{
+				background: rgb(32, 30, 30);
+			}
+			.fina .fina-content ul li:nth-of-type(6):hover{
+				background: rgb(10, 10, 10);
+			}
+			.fina .fina-content ul li:nth-of-type(7):hover{
+				background: rgb(239, 133, 55);
+			}
+			.fina .fina-content ul li:nth-of-type(8):hover{
+				background: rgb(10, 190, 242);
+			}
+			.fina .fina-content ul li:hover i{}
+			.fina .fina-content ul li:last-of-type{
+				margin-right: 0;
+			}
+			.fina .fina-content ul li i{
+				color: rgb(118, 130, 141);
+				font-size: 25px;
+			}
+			.fina .fina-content ul p{
+				display: block;
+				padding-top: 100px;
+				text-align: center;
+				color: rgb(131, 143, 152);
+				font-size: 14px;
+			}
+			.fina .fina-content ul span{
+				color: deeppink;
+				display: inline-block;
+				cursor: pointer;
+				
+			}
+			.fina .fina-content ul span:hover{
+				background: deeppink;
+				color: #fff;
+			}
+			.fina .fina-content ul p i{
+				color: deeppink;
+			}
+		</style>
+	</head>
+	<body>
+		<div  class="module">
+			<div class="img">
+				<div class="nav-wrapper">
+					<div></div>
+					<div class="logo-wrapper">
+						<div class="logo-left">
+							<span>mjau</span>
+							<span>mjau</span>
+							<i class="iconfont icon-xinghao"></i>
+						</div>
+						<ul>
+							<li>
+								<a>Blog
+									<i class="iconfont icon-jiantou"> </i>
+								</a>
+								<div class="detail">
+									<ul>
+										<li>
+											这个用css3我是真的写不来
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a>Concepts
+									<i class="iconfont icon-jiantou"> </i>
+								</a>
+							</li>
+							<li>
+								<a>About
+								
+								</a>
+							</li>
+							<li>
+								<a>Contact
+									<i class="iconfont icon-jiantou"> </i>
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+					<!-- <div class=""></div> -->
+				</div>
+				
+				<div class="button-left">
+					<i class="iconfont icon-right"></i>
+				</div>
+				<div class="button-right">
+					<i class="iconfont icon-you"></i>
+				</div>
+				<div class="fix-left">
+					<div class="share">
+						<i class="iconfont icon-share"></i>
+						<span>share</span>
+					</div>
+					<div class="facebook">
+						<i class="iconfont icon-Facebook"></i>
+						<span>Share&nbsp;On&nbsp;Facebook</span>
+					</div>
+					<div class="tweet">
+						<i class="iconfont icon-tweet_this"></i>
+						<span>Tweet</span>
+					</div>
+					<div class="google">
+						<i class="iconfont icon-googleplus"></i>
+						<span>Share&nbsp;On&nbsp;GooGle&nbsp;+</span>
+					</div>
+					<div class="pin">
+						<i class="iconfont icon-pinit"></i>
+						<span>Pin&nbsp;it</span>
+					</div>
+				</div>
+				<div class="fix-right">
+					<div >
+						<i class="iconfont icon-shezhi"></i>
+						<span>X3&nbsp;Styler</span>
+					</div>
+					<div >
+						<i class="iconfont icon-guangbo"></i>
+						<span>Play</span>
+					</div>
+					<div >
+						<i class="iconfont icon-liaotianPCduanweixinicon--"></i>
+						<span>Chat</span>
+					</div>
+				</div>
+			</div>
+			<div class="words">
+				<div class="content">
+					<b>mjau-mjau</b>
+					<i class="iconfont icon-xinghao"> </i>
+					<p>Technology, say hello to design — Interactive design blog and playground.</p>
+				</div>
+			</div>
+			
+		</div>
+		<div class="row">
+			<div class="row-content">
+				<ul>
+					<li>
+						
+						<h2>Cloudflare&nbsp;Page&nbsp;Caching</h2>
+						<h6>
+							<i class="iconfont icon-mext-icon-time"></i>
+							4年之前
+						</h6>
+						<img src="img/the_vehicle.jpg" />
+						<p>Cloudflare does not cache web pages by default, but by applying a page-rule, you can also serve pages at blazing speeds from the Cloudflare CDN.</p>
+						<div class="round">
+							<i class="iconfont icon-xinghao"></i>
+						</div>
+					</li>
+					<li>
+						<h2>Ajax&nbsp;Universal&nbsp;Analutics</h2>
+						<h6>
+							<i class="iconfont icon-mext-icon-time"></i>
+							4年之前
+						</h6>
+						<img src="img/3.evening.jpg" />
+						<p>With the availability of html5 and ajax websites on the rise, how to elegantly integrate Google Universal Analytics into single page javascript applications?</p>
+						<div class="round">
+							<i class="iconfont icon-xinghao"></i>
+						</div>
+					</li>
+					<li>
+						<h2>Rewind &nbsp;Web&nbsp;2002</h2>
+						<h6>
+							<i class="iconfont icon-mext-icon-time"></i>
+							5年之前
+						</h6>
+						<img src="img/martians.jpg" />
+						<p>Rewind the web to 2002, when an emerging Shockwave Flash technology was taking the web with storm, offering app-like experiences before we had modern CSS and javascript frameworks.</p>
+						<div class="round">
+							<i class="iconfont icon-xinghao"></i>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="fina">
+			<div class="fina-content">
+				<div class="top">
+					<i class="iconfont icon-icon"></i>
+				</div>
+				<ul>
+						<li>
+							<i class="iconfont icon-Facebook"></i>
+						</li>
+						
+						<li>
+							<i class="iconfont icon-googleplus"></i>
+						</li>
+						<li>
+							<i class="iconfont icon-linkedin"></i>
+						</li>
+						<li>
+							<i class="iconfont icon-tweet_this"></i>
+						</li>
+						<li>
+							<i class="iconfont icon-github"></i>
+						</li>
+						<li>
+							<i class="iconfont icon-codepen"></i>
+						</li>
+						<li>
+							<i class="iconfont icon-feed"></i>
+						</li>
+						<li>
+							<i class="iconfont icon-xinfeng"></i>
+						</li>
+						<p>Made &nbsp;with &nbsp;<span>X3&nbsp;Photo&nbsp; Gallery</span>&nbsp; <i class="iconfont icon-aixin"></i></p>
+						
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
